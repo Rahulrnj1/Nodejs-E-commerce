@@ -28,7 +28,7 @@ const productupload = multer({ storage: productstorage })
 const { checkAuth } = require('../middleware/jwt')
 
 const { addcategotyschema, updatecategotyschema } = require('../middleware/Category.joi')
-const {  updateorderschema } = require('../middleware/Order.joi')
+const { updateorderschema } = require('../middleware/Order.joi')
 const { addproductschema, updateproductschema } = require('../middleware/Product.joi');
 
 const category_controller = require("../controllers/Admin/Category")

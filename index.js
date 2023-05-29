@@ -14,7 +14,7 @@ mongoose.connect('mongodb://127.0.0.1:27017/Ecommerce')
 const app = express('');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-
+                    
 const user_route = require('./router/users');
 app.use('/api', user_route);
 

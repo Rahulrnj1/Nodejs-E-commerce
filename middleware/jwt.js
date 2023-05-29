@@ -3,7 +3,7 @@ const jwt = require("jsonwebtoken");
 function checkAuth(req, res, next) {
     try {
         const bearerHeader = req.headers['authorization'];
-        console.log(bearerHeader);
+        // console.log(bearerHeader);
         if (typeof bearerHeader !== "undefined") {
             // console.log("12");
             const bearer = bearerHeader.split(" ");
@@ -15,7 +15,7 @@ function checkAuth(req, res, next) {
                         message: "Invalid token"
                     })
                 } else {
-                    console.log(authData)
+                    // console.log(authData)
                     req['userData'] = authData.user;
                     next();
                 }

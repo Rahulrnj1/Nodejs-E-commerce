@@ -7,7 +7,7 @@ const category = async (req, res) => {
         // res.send(blog)
         return res.status(200).json({ status: 200, message: "All category get succesfully", data: category });
         // const result = await course.save();
-        console.log(result);
+        // console.log(category);
     }
     catch (ex) {
         console.log(ex.message);
@@ -69,7 +69,7 @@ const Deletecategory = async (req, res) => {
 
 };
 const Getcategory = async (req, res) => {
-    // console.log("234")
+
     try {
         const category = await Category.findById(req.params.id);
         return res.status(200).json({ status: 200, message: "The category with the given ID", data: category });
@@ -79,6 +79,7 @@ const Getcategory = async (req, res) => {
     catch (ex) {
         console.log(ex.message);
         if (!category) return res.status(404).send('the category with the given ID');
+
 
     }
 };

@@ -7,9 +7,9 @@ const Addproduct = async (req, res) => {
 
         // console.log(req.file)
         let fileName = req.file.filename;
-        console.log(fileName);
+        // console.log(fileName);
 
-        let product = new Product({ userId: req.params.id, name: req.body.name, title: req.body.title, descriptions: req.body.descriptions, image: fileName, Categoryid: req.body.Categoryid });
+        let product = new Product({ userId: req.params.id, name: req.body.name, title: req.body.title, descriptions: req.body.descriptions, Categoryid: req.body.Categoryid });
         product = await product.save();
 
 
